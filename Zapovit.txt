@@ -1,5 +1,8 @@
 1.jak umru to pohovajte 
 2.mene na mohyli
 
+
 4.Na vkraini myliy
->>>>>>> 60cb6323cb184f19b389ea1092d5ac3c5b4ee22d
+
+3 make some changes in folder
+
