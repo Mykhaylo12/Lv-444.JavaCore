@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 Commit Kryvenko Sergii
-=======
-jak umru to pohovajte mene na mohyli
->>>>>>> 85b47f5e04ffeb6c16ae20b5de6759b8ab444d6d
+Commit Sergii
