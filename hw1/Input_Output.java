@@ -26,12 +26,12 @@ public class Input_Output {
 		//Task "Flower"
 		int r;
 		double c, s;
-		final double PI=3.14;
+		//final double PI=3.14;
 		System.out.println("Radius:");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		r = Integer.parseInt(br.readLine());
-		c = r*2*PI;
-		s = r*r*PI;
+		c = r*2*Math.PI;
+		s = r*r*Math.PI;
 		System.out.println("Perimetr = "+ c + ", Area = " + s);
 		
 		//Task "Adress"
