@@ -7,13 +7,12 @@ import java.io.InputStreamReader;
 public class PerimeterCircle {
 
 	public static void main(String[] args) throws IOException {
-		final double PI = 3.141592653589793;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter the radius of Flower bed: ");
 		String text = br.readLine();
 		float radius = Float.parseFloat(text);
-		float perimeter = (float) (PI * radius * radius);
-		System.out.format("Obtained results perimeters of Flower bed is: %04.3f", perimeter);
+		System.out.format("Obtained results perimeters of Flower bed is: %04.3f \n", Math.PI * radius * 2);
+		System.out.printf("Obtained results area of Flower bed is: %04.3f", Math.PI * radius * radius);
 
 	}
 
