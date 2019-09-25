@@ -1,10 +1,13 @@
 package com.softserve.lukas3;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.time.LocalDate;
 
 public class Person {
 	//Declare CONSTANT current YEAR
-	private static final int CURRENT_YEAR = 2019;
+//	private static final int CURRENT_YEAR = 2019;
 	protected static final String INPUT_FIRST_NAME = "Input Person's First Name";	
 	protected static final String INPUT_LAST_NAME = "Input Person's Last Name";	
 	protected static final String INPUT_BIRTH_YEAR = "Input Birth Year";
@@ -23,6 +26,7 @@ public class Person {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+	
 	public String getLastName() {
 		return lastName;
 	}
@@ -44,11 +48,28 @@ public class Person {
 	};
 	
 	public int getAge(){
-		return CURRENT_YEAR-this.birthYear;
+        LocalDate date = LocalDate.now();
+		return date.getYear()-this.birthYear;
+	}
+	public static void yearCheck(int year){
+		if ((year<1900)||(year>2019)){
+			System.out.println("Wrong year, year must be between 1900 and 2019.");
+		} 
+	}
+	public static void output(String output){
+		System.out.println("Information about person: ");
+		System.out.println("   " +output);
+	}
+	
+	public static String input(String name) throws IOException{
+		System.out.println(name+":");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	
+		return br.readLine();
 	}
 	public void changeName(String fs, String ls) throws IOException{
 		System.out.println("Do you want to change a name for " + this.getFirstName()+" "+this.getLastName()+ "? Type y for Yes or n for Not");
-		sAnswerChangeName=Input.input("Your Answer");
+		sAnswerChangeName=input("Your Answer");
 		if (sAnswerChangeName.equals("y"))
 		{
 			if (fs.length()>0){
@@ -57,7 +78,7 @@ public class Person {
 			if (ls.length()>0){
 			this.setLastName(ls);
 			}	
-			Output.output("New name is "+fs+" "+ls);
+			output("New name is "+fs+" "+ls);
 		
 		}
 

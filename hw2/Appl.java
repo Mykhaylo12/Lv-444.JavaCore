@@ -14,12 +14,12 @@ public class Appl {
 		
 		for (int i=0;i<deptSalesPersonsCount;i++){
 			deptSalesPersons[i]=new Person();
-			deptSalesPersons[i].setFirstName(Input.input(Person.INPUT_FIRST_NAME)); 
-			deptSalesPersons[i].setLastName(Input.input(Person.INPUT_LAST_NAME));
-			deptSalesPersons[i].setBirthYear(Integer.parseInt(Input.input(Person.INPUT_BIRTH_YEAR)));
+			deptSalesPersons[i].setFirstName(Person.input(Person.INPUT_FIRST_NAME)); 
+			deptSalesPersons[i].setLastName(Person.input(Person.INPUT_LAST_NAME));
+			deptSalesPersons[i].setBirthYear(Integer.parseInt(Person.input(Person.INPUT_BIRTH_YEAR)));
 		}
-	Output.output("First Name: " + deptSalesPersons[0].getFirstName());
-	Output.output("Age = "+String.valueOf(deptSalesPersons[0].getAge()));
+	Person.output("First Name: " + deptSalesPersons[0].getFirstName());
+	Person.output("Age = "+String.valueOf(deptSalesPersons[0].getAge()));
 	
 	deptSalesPersons[1].changeName("Berta", "Lay");
 	
