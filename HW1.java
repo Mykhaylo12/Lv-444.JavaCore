@@ -52,24 +52,22 @@ public class HW1 {
 		
 		System.out.println("Perimeter " + Per);  
 		System.out.println("Area " + Sqr); 
-	}
-	public static void main1 (String [] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Hello, what is your name? ");
-		String name = br.readLine();
+		String name = br1.readLine();
 		System.out.println("where you live" + name);
-    	String adress = br.readLine();
+    	String adress = br1.readLine();
 	
 		System.out.println("Hello " + name + " You live in " + adress);
-	}
-	public static void cals (String [] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter call value 1 ");
-		int val1 = Integer.parseInt(br.readLine());
+		int val1 = Integer.parseInt(br2.readLine());
 		System.out.println("Enter call value 2");
-		int val2 = Integer.parseInt(br.readLine());
+		int val2 = Integer.parseInt(br2.readLine());
 		System.out.println("Enter call value 3");
-		int val3 = Integer.parseInt(br.readLine());
+		int val3 = Integer.parseInt(br2.readLine());
 				
 	    	call1 = val1*0.1;
 	    	call2 = val2*0.5;		
