@@ -3,11 +3,14 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
 
 public class Person {
     private String firstName;
     private String lastName;
     private int birthYear=1990;
+
+
 
     BufferedReader br = new BufferedReader(
             new InputStreamReader(System.in));
@@ -16,6 +19,7 @@ public class Person {
         this.firstName = br.readLine();
         this.lastName = br.readLine();
         this.birthYear = Integer.parseInt(br.readLine());
+
     }
 
     public Person(String firstName, String lastName) {
@@ -57,9 +61,7 @@ public class Person {
     }
 
     public int getAge(){
-        return 2019-getBirthYear();
+    LocalDate date = LocalDate.now(); // получаем текущую дату
+        return date.getYear()-getBirthYear();
     }
-
-
-
 }

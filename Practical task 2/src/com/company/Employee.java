@@ -5,7 +5,7 @@ public class Employee {
     private String name;
     private double rate = 0;
     private double hours = 0;
-
+int count =0;
 
 
 
@@ -13,6 +13,12 @@ public class Employee {
         this.name = name;
         this.rate = rate;
         this.hours = hours;
+        count++;
+        totalSum = totalSum + hours*rate*1.1;
+    }
+
+    public static double getTotalSum(){
+        return totalSum;
     }
 
 
@@ -29,7 +35,10 @@ public class Employee {
     }
 
     public void setRate(double rate) {
+        totalSum = totalSum - hours*rate*1.1;
         this.rate = rate;
+        totalSum = totalSum + hours*rate*1.1;
+
     }
 
     public double getHours() {
@@ -37,7 +46,10 @@ public class Employee {
     }
 
     public void setHours(double hours) {
+        totalSum = totalSum - hours*rate*1.1;
         this.hours = hours;
+        totalSum = totalSum + hours*rate*1.1;
+
     }
 
     public double getSalary() {
@@ -53,6 +65,23 @@ public class Employee {
   public double changeRate(double rate){
         return this.rate=rate*1.1;
 }
+
+    public double totalSum(double... nums) {
+
+    double sum = getBonus();
+
+        for(int i=0;i<count;i++) {
+          sum += count;
+      }
+        return sum; //return the sum
+
+    }
+
+    @Override
+    public String toString() {
+        return "name " + name + " salary " + getSalary()*1.1;
+    }
 }
+
 
 
