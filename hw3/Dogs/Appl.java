@@ -39,7 +39,7 @@ public class Appl {
 					dogAgeMax=dog3;
 				}
 				// Check dog name equal but dog different
-				if (dog3.getSdogName().equals(tempName) && !dog3.equals(dog2)) {
+				if (dog3.getSdogName().equalsIgnoreCase(tempName) && !dog3.equals(dog2)) {
 					ssameName = dog3.getSdogName();
 					bdogSameName=true;
 				}
