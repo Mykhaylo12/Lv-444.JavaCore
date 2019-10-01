@@ -1,9 +1,14 @@
 package hw3;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class app {
     public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+
     Dog dog1 = new Dog("Alex",Breed.Bulldog,3);
     Dog dog2 = new Dog("John",Breed.Setter,7);
     Dog dog3 = new Dog("Alex",Breed.Collie,1);

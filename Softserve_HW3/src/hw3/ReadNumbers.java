@@ -2,12 +2,10 @@ package hw3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class ReadNumbers {
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    public static String[] readNumbers(int count) throws IOException {
+    public static String[] readNumbers(int count, BufferedReader br) throws IOException {
         String[] str = new String[count];
         for (int i = 0; i < count; i++) {
             str[i] = br.readLine();
@@ -15,10 +13,8 @@ public class ReadNumbers {
         return str;
     }
 
-    public static void checkRange(int min, int max, int count) throws IOException {
-        String[] str = new String[count];
-        str = readNumbers(count);
-        for (int i = 0; i <count ; i++) {
+    public static void checkRange(int min, int max, String[] str) {
+       for (int i = 0; i <str.length ; i++) {
             float checkNumber = Float.parseFloat(str[i]);
             if (checkNumber > max){
                 System.out.println(str[i] + " this number is more than " + max);
@@ -30,13 +26,11 @@ public class ReadNumbers {
         }
     }
 
-    public static void checkMinMax(int count) throws IOException {
-        String[] str = new String[count];
-        str = readNumbers(count);
+    public static void checkMinMax(String[] str) {
         int min = Integer.parseInt(str[0]);
         int max = Integer.parseInt(str[0]);
 
-        for (int i = 1; i < count; i++) {
+        for (int i = 1; i < str.length; i++) {
             int checkNumber = Integer.parseInt(str[i]);
             if (checkNumber > max){
                 max = checkNumber;
