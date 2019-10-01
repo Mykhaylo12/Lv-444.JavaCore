@@ -7,7 +7,8 @@ import java.io.InputStreamReader;
 public class app {
     public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+    Numbers.checkMinMax(Numbers.readNumbers(3,br));
+    Numbers.checkRange(-5,5, Numbers.readNumbers(3,br));
 
     Dog dog1 = new Dog("Alex",Breed.Bulldog,3);
     Dog dog2 = new Dog("John",Breed.Setter,7);

@@ -3,7 +3,7 @@ package hw3;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class ReadNumbers {
+public class Numbers {
 
     public static String[] readNumbers(int count, BufferedReader br) throws IOException {
         String[] str = new String[count];
