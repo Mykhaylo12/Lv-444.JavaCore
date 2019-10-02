@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fb427ec-d979-4933-889b-5524ba3a6bf9" name="Default Changelist" comment="" />
+    <list default="true" id="382016a1-00f9-4a91-94bf-e2b7f4c71096" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,12 +11,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1RSEjiPuCRh79uUKqsg6hNAVe1N" />
+  <component name="ProjectId" id="1RdtupCi1DdTDWuXMzCNBmoilYC" />
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -32,7 +36,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="Home work 3" />
+      <module name="HomeWork5_Arrays" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -51,11 +55,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5fb427ec-d979-4933-889b-5524ba3a6bf9" name="Default Changelist" comment="" />
-      <created>1569652234013</created>
+      <changelist id="382016a1-00f9-4a91-94bf-e2b7f4c71096" name="Default Changelist" comment="" />
+      <created>1570009025254</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569652234013</updated>
+      <updated>1570009025254</updated>
     </task>
     <servers />
   </component>
