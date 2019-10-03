@@ -31,13 +31,13 @@ public class app {
     }
 
     static void orderedCarsByYear(Car[] cars){
-        int tmp;
+        Car tmp;
         for (int i = 0; i < cars.length - 1; i++) {
             for (int j = i + 1; j < cars.length; j++) {
                 if (cars[i].getYear() > cars[j].getYear()) {
-                    tmp = cars[i].getYear();
-                    cars[i].setYear(cars[j].getYear());
-                    cars[j].setYear(tmp);
+                    tmp = cars[i];
+                    cars[i] = cars[j];
+                    cars[j] = tmp;
                 }
             }
         }
