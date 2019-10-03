@@ -54,6 +54,18 @@ public class Calculate {
 		}
 
 	}
+
+    for (int i=0;i<5;i++) {
+			
+			if (a[i]>0){
+				sum += a[i];
+			} else {
+				for (i=5; i < arr.length-1;i++) {
+					product *= a[i];
+					break;
+									}
+			}
+
 	
 	private static void CalculatePos(int arr[]){
 		final int POS_POSITIVE=1;
