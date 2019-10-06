@@ -21,31 +21,28 @@ public class App4 {
 		for (int i = 0; i < car.length; i++) {
 			if (car[i].getYearOfProduction() == certanYear) {
 				System.out.println("Your car certain model year is " + car[i].toString());
-			} else {
-				System.out.println("You entered the wrong year");
-				break;
 			}
+//			else {
+//				System.out.println("You entered the wrong year");
+//				break;
+//			}
 		}
-		
-		//ordered cars by the field year using the bubble method
+
+		// ordered cars by the field year using the bubble method
 		System.out.println("\nOrdered cars by the field year using the bubble method");
 		Car tmp = new Car();
-		for (int i = 0; i < car.length-1; i++) {
-			for (int j = i+1; j< car.length; j++)
-				if (car[i].getYearOfProduction()<car[j].getYearOfProduction()) {
-					tmp.setType(car[i].getType());
-					tmp.setYearOfProduction(car[i].getYearOfProduction());
-					tmp.setEngineCapacity(car[i].getEngineCapacity());
-					car[i].setYearOfProduction(car[j].getYearOfProduction());
-					car[i].setType(car[j].getType());
-					car[i].setEngineCapacity(car[j].getEngineCapacity());
-					car[j].setYearOfProduction(tmp.getYearOfProduction());
-					car[j].setType(tmp.getType());
-					car[j].setEngineCapacity(tmp.getEngineCapacity());
+		for (int i = 0; i < car.length - 1; i++) {
+			for (int j = i + 1; j < car.length; j++) {
+				if (car[i].getYearOfProduction() < car[j].getYearOfProduction()) {
+					tmp = car[i];
+					car[i] = car[j];
+					car[j] = tmp;
+
 				}
+			}
 		}
 		for (int i = 0; i < car.length; i++) {
-			System.out.println(car[i].toString());
+			System.out.println(car[i]);
 		}
 	}
 }

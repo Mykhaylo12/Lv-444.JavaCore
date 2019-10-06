@@ -13,11 +13,11 @@ public class App3 {
 		int pos1 = 0; // position of second positive number
 		int min;
 		int pos2 = 0; // position min number
-		BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter 5 integer numbers");
 		for (int i = 0; i < 5; i++) {
 			System.out.println("Your " + (i + 1) + " number is ");
-			String text = br1.readLine();
+			String text = br.readLine();
 			num1[i] = Integer.parseInt(text);
 
 			// position of second positive number
@@ -25,6 +25,7 @@ public class App3 {
 				pos1 = i;
 				count++;
 			}
+
 		}
 		System.out.println("position of second positive number is " + (pos1 + 1));
 
@@ -39,18 +40,18 @@ public class App3 {
 		System.out.println("minimum number is " + min + " and its position in the array is " + (pos2 + 1));
 
 		// Organize entering integers until the first negative number.
-		int[] num2 = new int [10];
+		int[] num2 = new int[10];
 		int prod = 1;
-		BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
+
 		System.out.println("Enter integer numbers");
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Your " + (i + 1) + " number is ");
-			String text = br2.readLine();
+			String text = br.readLine();
 			num2[i] = Integer.parseInt(text);
-			if (num2[i]%2==0) {
+			if (num2[i] % 2 == 0) {
 				prod = prod * num2[i];
 			}
-			if (num2[i]<=0) {
+			if (num2[i] <= 0) {
 				System.out.println("You entered a negative or '0' number. Entering stoped.");
 				break;
 			}
