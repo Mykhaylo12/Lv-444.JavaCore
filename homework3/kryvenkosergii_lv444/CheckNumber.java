@@ -18,9 +18,6 @@ public class CheckNumber {
 	}
 
 	public CheckNumber(float numberF1, float numberF2, float numberF3) {
-//		this.numberF1 = numberF1;
-//		this.numberF2 = numberF2;
-//		this.numberF3 = numberF3;
 
 		if (numberF1 <= 5 && numberF1 >= -5) {
 			this.numberF1 = numberF1;

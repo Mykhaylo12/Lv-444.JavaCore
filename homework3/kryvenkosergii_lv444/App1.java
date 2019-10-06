@@ -11,11 +11,11 @@ public class App1 {
 		// checking range float numbers
 		float[] numF = new float[3];
 
-		BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter 3 float numbers which are they belong to the range [-5,5]");
 		for (int i = 0; i < 3; i++) {
 			System.out.printf("Your %d number is \n", i + 1);
-			String text1 = br1.readLine();
+			String text1 = br.readLine();
 			numF[i] = Float.parseFloat(text1);
 			if (numF[i] > 5 || numF[i] < -5) {
 				System.out.printf("Number %f isn't belong to the range [-5,5]\n", numF[i]);
@@ -30,11 +30,10 @@ public class App1 {
 		// checking int number and determine min and max
 		int[] numI = new int[3];
 
-		BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter 3 integer numbers");
 		for (int i = 0; i < 3; i++) {
 			System.out.printf("Your %d number is \n", i + 1);
-			String text2 = br2.readLine();
+			String text2 = br.readLine();
 			numI[i] = Integer.parseInt(text2);
 		}
 		System.out.println(numI[0] + " " + numI[1] + " " + numI[2]);
@@ -43,9 +42,8 @@ public class App1 {
 		System.out.println("min number is " + checkNumberInteger.getMinNumberI());
 
 		// name of HTTPError
-		BufferedReader br3 = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter number of HTTP Error");
-		String text3 = br3.readLine();
+		String text3 = br.readLine();
 		int num = Integer.parseInt(text3);
 
 		switch (num) {

@@ -3,7 +3,7 @@ package homework3.kryvenkosergii_lv444;
 public class Dog {
 		
 	private String name;
-	private String breed;
+	Breed breed;
 	private int age;
 	
 	public String getName() {
@@ -12,10 +12,10 @@ public class Dog {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getBreed() {
+	public Breed getBreed() {
 		return breed;
 	}
-	public void setBreed(String breed) {
+	public void setBreed(Breed breed) {
 		this.breed = breed;
 	}
 	public int getAge() {
@@ -29,7 +29,7 @@ public class Dog {
 		
 	}
 	
-	public Dog(String name, String breed, int age) {
+	public Dog(String name, Breed breed, int age) {
 	
 		this.name = name;
 		this.breed = breed;
