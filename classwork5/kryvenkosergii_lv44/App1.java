@@ -31,25 +31,19 @@ public class App1 {
 		}
 		return count;
 	}
-	
+
 	static int getValuePosOrNeg(int number[]) {
 		int valuePos = 0;
 		int valueNeg = 0;
-		int bigValue = 0;
 		for (int i = 0; i < number.length; i++) {
 			if (number[i] < 0) {
-				valueNeg += number [i];
+				valueNeg += number[i];
 			} else {
-				valuePos += number [i];
+				valuePos += number[i];
 			}
 		}
-		
-		if (valuePos>-valueNeg) {
-			bigValue = valuePos;
-		} else {
-			bigValue = valueNeg;
-		}
-		return bigValue;
+
+		return (valuePos > -valueNeg ? valuePos : valueNeg);
 	}
 
 	public static void main(String[] args) {
@@ -61,7 +55,7 @@ public class App1 {
 
 		int[] num3 = { 5, -30, 25, 0, -5, 6, -5, 6, -7 };
 		System.out.println("Your amount of negative numbers is " + getNegativCount(num3));
-		
+
 		System.out.println("Value is more " + getValuePosOrNeg(num3));
 
 	}

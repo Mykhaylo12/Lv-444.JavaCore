@@ -8,8 +8,12 @@ public class App2 {
 
 	public static void main(String[] args) throws IOException {
 
-		Employee[] emp = { new Employee("Bob", 1, 5), new Employee("Jim", 3, 2), new Employee("Sam", 2, 10),
-				new Employee("Fox", 3, 7), new Employee("Sally", 1, 10) };
+		Employee[] emp = new Employee[5];
+		emp[0] = new Employee("Bob", 1, 5);
+		emp[1] = new Employee("Jim", 3, 2);
+		emp[2] = new Employee("Sam", 2, 10);
+		emp[3] = new Employee("Fox", 3, 7);
+		emp[4] = new Employee("Sally", 1, 10);
 
 		// all employees of a certain department
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,19 +32,13 @@ public class App2 {
 		for (int i = 0; i < emp.length-1; i++) {
 			for (int j = i+1; j< emp.length; j++)
 				if (emp[i].getSalary()<emp[j].getSalary()) {
-					tmp.setName(emp[i].getName());
-					tmp.setDepartmentNumber(emp[i].getDepartmentNumber());
-					tmp.setSalary(emp[i].getSalary());
-					emp[i].setDepartmentNumber(emp[j].getDepartmentNumber());
-					emp[i].setName(emp[j].getName());
-					emp[i].setSalary(emp[j].getSalary());
-					emp[j].setDepartmentNumber(tmp.getDepartmentNumber());
-					emp[j].setName(tmp.getName());
-					emp[j].setSalary(tmp.getSalary());
+					tmp = emp[i];
+					emp[i] = emp[j];
+					emp[j] = tmp;
 				}
 		}
 		for (int i = 0; i < emp.length; i++) {
-			System.out.println(emp[i].toString());
+			System.out.println(emp[i]);
 		}
 
 	}
