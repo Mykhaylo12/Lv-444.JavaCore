@@ -1,13 +1,15 @@
-package homework3.kryvenkosergii_lv444;
+package homework2.kryvenkosergii_lv444;
 
 import java.time.Year;
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Person {
 	private String firsName = null;
 	private String lastName = null;
 	private int birthYear = 0;
 	private String info = null;
+
+	private static Scanner scn = new Scanner(System.in);
 
 	public String getFirsName() {
 		return firsName;
@@ -33,29 +35,33 @@ public class Person {
 		this.birthYear = birthYear;
 	}
 
+	public String getInfo() {
+		return info;
+	}
+
 	public Person() {
 	}
 
-	public Person(String firsName, String lastName) {
+	public Person(String firsName, String lastName, int birthYear) {
 		this.firsName = firsName;
 		this.lastName = lastName;
+		this.birthYear = birthYear;
 	}
 
 	protected int getAge() {
 		return Year.now().getValue() - this.birthYear;
 	}
 
-	protected void input(String info) {
-//		System.out.println("Enter information about person:");
-//		@SuppressWarnings("resource")
-//		Scanner scn = new Scanner (System.in);
-//		return scn.next();
-		this.info = info;
+	public void input() {
+		System.out.println("Enter information about " + firsName + " " + lastName);
+		String text = scn.nextLine();
+		this.info = text;
+//		scn.close();
 	}
 
 	public String output() {
 		return "Person [firsName=" + firsName + ", lastName=" + lastName + ", birthYear=" + birthYear + ", getAge()="
-				+ getAge() + " info from person is " + this.info + "]";
+				+ getAge() + " info from person: " + this.info + "]";
 	}
 
 	public void changeName(String fN, String lN) {

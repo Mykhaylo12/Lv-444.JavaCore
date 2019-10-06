@@ -1,35 +1,25 @@
-package homework3.kryvenkosergii_lv444;
+package homework2.kryvenkosergii_lv444;
 
 public class InfoAboutPerson {
 
 	public static void main(String[] args) {
-		Person pers1 = new Person("Vasya", "Pupkin");
-		pers1.setBirthYear(1980);
-		pers1.input("friendly and sociable man");
-		System.out.println(pers1.output());
+		Person[] pers = new Person[5];
 
-		Person pers2 = new Person("Ivan", "Durak");
-		pers2.setBirthYear(1982);
-		pers2.input("shy and unsociable man");
-		System.out.println(pers2.output());
+		pers[0] = new Person("Vasya", "Pupkin", 1980); // friendly and sociable man
+		pers[1] = new Person("Ivan", "Durak", 1982); // shy and unsociable man
+		pers[2] = new Person("Igor", "Rak", 1985); // intelligent and hardworking man
+		pers[3] = new Person("Mark", "Rid", 1995); // young and active man
+		pers[4] = new Person("John", "Torn", 1998); // lazy and unfriendly man
 
-		Person pers3 = new Person("Igor", "Rak");
-		pers3.setBirthYear(1985);
-		pers3.input("intelligent and hardworking man");
-		System.out.println(pers3.output());
+		// input information about persons
+		for (int i = 0; i < pers.length; i++) {
+			pers[i].input();
+		}
 
-		Person pers4 = new Person("Mark", "Rid");
-		pers4.setBirthYear(1995);
-		pers4.input("young and active man");
-		System.out.println(pers4.output());
-
-		Person pers5 = new Person("Mark", "Rid");
-		pers5.setBirthYear(1998);
-		pers5.input("lazy and unfriendly man");
-		System.out.println(pers5.output());
-
-//		pers5.changeName("Ostin", "Daniels");
-//		System.out.println(pers5.output());
+		// output information about persons
+		for (int i = 0; i < pers.length; i++) {
+			System.out.println(pers[i].output());
+		}
 
 	}
 
