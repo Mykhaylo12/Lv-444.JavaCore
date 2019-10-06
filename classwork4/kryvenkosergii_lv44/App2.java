@@ -14,16 +14,16 @@ public class App2 {
 		
 		switch (num) {
 		case 1:
-			System.out.println("Monady, Понеділок, Понедельник");
+			System.out.println("Monday, Понеділок, Понедельник");
 			break;
 		case 2:
-			System.out.println("Tusday, Вівторок, Вторник");
+			System.out.println("Tuesday, Вівторок, Вторник");
 			break;
 		case 3:
 			System.out.println("Wednesday, Середа, Среда");
 			break;
 		case 4:
-			System.out.println("Thirsday, Четвер, Четверг");
+			System.out.println("Thursday, Четвер, Четверг");
 			break;
 		case 5:
 			System.out.println("Friday, Пятниця, Пятница");

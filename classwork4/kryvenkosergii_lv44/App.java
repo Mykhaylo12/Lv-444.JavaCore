@@ -9,31 +9,29 @@ public class App {
 		int num1, num2, num3;
 	
 		System.out.print("Enter first number ");
-		Scanner scn1 = new Scanner(System.in);
-		num1 = scn1.nextInt();
+		Scanner scn = new Scanner(System.in);
+		num1 = scn.nextInt();
 		if (num1 % 2 == 0) {
 			numOdd++;
 		}
 		
 		System.out.print("Enter second number ");
-		Scanner scn2 = new Scanner(System.in);
-		num2 = scn2.nextInt();
+
+		num2 = scn.nextInt();
 		if (num2 % 2 == 0) {
 			numOdd++;
 		}
 		
 		System.out.print("Enter third number ");
-		Scanner scn3 = new Scanner(System.in);
-		num3 = scn3.nextInt();
+	
+		num3 = scn.nextInt();
 		if (num3 % 2 == 0) {
 			numOdd++;
 		}
 
 		System.out.printf("You entered %d odd numbers\n", numOdd);
-		scn1.close();
-		scn2.close();
-		scn3.close();
-
+		scn.close();
+	
 	}
 
 }
