@@ -16,6 +16,16 @@ public class Employee {
       this.salary = salary;
    }
 
+   Arrays.sort(persons, new Comparator(Employee) () {
+      public int compare(Person a, Person b) {
+         return a.getGrowth() - b.getGrowth();
+      }
+   });
+        System.out.println("\nSorted by growth:");
+        for ( Person p : persons )
+           System.out.println(p);
+
+
    public String getName() {
       return name;
    }

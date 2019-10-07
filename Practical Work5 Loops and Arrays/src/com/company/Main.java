@@ -70,16 +70,21 @@ public class Main {
 //arrange workers by the field salary in descending order.
 
 
-        int tmp;
-        for (int i = 0; i < e.length - 1; i++) {
-            for (int j = i + 1; j < e.length; j++) {
-                if (e[i].hashCode()>e[j].hashCode()) {
-                    tmp = e[i].getDepartament();
-                    e[i].hashCode() = e[j].hashCode();
-                    e[j].hashCode() = tmp;
+        Employee tmp = new Employee();
+        for (int i = 0; i < emp.length-1; i++) {
+            for (int j = i+1; j< emp.length; j++)
+                if (emp[i].getSalary()<emp[j].getSalary()) {
+                    tmp.setName(emp[i].getName());
+                    tmp.setDepartmentNumber(emp[i].getDepartmentNumber());
+                    tmp.setSalary(emp[i].getSalary());
+                    emp[i].setDepartmentNumber(emp[j].getDepartmentNumber());
+                    emp[i].setName(emp[j].getName());
+                    emp[i].setSalary(emp[j].getSalary());
+                    emp[j].setDepartmentNumber(tmp.getDepartmentNumber());
+                    emp[j].setName(tmp.getName());
+                    emp[j].setSalary(tmp.getSalary());
                 }
-            }
         }
-        for (int i = 0; i < e.length; i++) {
-            System.out.print(e[i]+" ,");
+        for (int i = 0; i < emp.length; i++) {
+            System.out.println(emp[i].toString());
         }}}
