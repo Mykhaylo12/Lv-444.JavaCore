@@ -12,8 +12,6 @@ public abstract class Employee {
         this.name = name;
     }
 
-    public double salary;
-
     public Employee(String employeeId, String name) {
         this.employeeId = employeeId;
         this.name = name;

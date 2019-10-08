@@ -39,12 +39,11 @@ public class ContractEmployee extends Employee implements Calculate {
 
     @Override
     public double getSalary() {
-        calculatePay();
-        return salary;
+        return calculatePay();
     }
 
     @Override
-    public void calculatePay() {
-        salary = getNumberOfHoursWorked()*hourlyRate;
+    public double calculatePay() {
+        return getNumberOfHoursWorked()*hourlyRate;
     }
 }

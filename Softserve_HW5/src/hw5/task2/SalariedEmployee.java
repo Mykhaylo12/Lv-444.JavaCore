@@ -29,12 +29,11 @@ public class SalariedEmployee extends Employee implements Calculate {
 
 
     @Override
-    public void calculatePay() {
-        salary = fixedMonthlyPay;
+    public double calculatePay() {
+        return fixedMonthlyPay;
     }
 
     public double getSalary(){
-        calculatePay();
-        return salary;
+        return calculatePay();
     }
 }
