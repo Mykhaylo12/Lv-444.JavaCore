@@ -15,44 +15,49 @@ public class Appl {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
-		Map <Integer,String>employeeMap = new HashMap();
+		Map<Integer, String> employeeMap = new HashMap();
 		employeeMap.put(1, "Larry");
 		employeeMap.put(2, "Simon");
 		employeeMap.put(3, "John");
-		employeeMap.put(4, "West");		
+		employeeMap.put(14, "West");
 		employeeMap.put(5, "Kanny");
-		employeeMap.put(6, "West");
+		employeeMap.put(16, "West");
 		employeeMap.put(7, "Wells");
 		String tmp = "";
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		tmp=br.readLine();
+		tmp = br.readLine();
 		if (employeeMap.containsKey(Integer.parseInt(tmp))) {
-			
+
 			System.out.println((String) employeeMap.get(Integer.parseInt(tmp)));
-		}else {
+		} else {
 			System.out.println("ID - wrong");
 		}
-		
-		tmp=br.readLine();
+
+		tmp = br.readLine();
 		if (employeeMap.containsValue(tmp)) {
-		
-			for (int i = 0; i < employeeMap.size(); i++) {
-				
-				if (tmp.equalsIgnoreCase(employeeMap.get(i))) {
-//				if ((String) employeeMap.get(i)==tmp) {
-					System.out.println(i);				
+
+			// for (int i = 0; i < employeeMap.size(); i++) {
+			//
+			// if (tmp.equalsIgnoreCase(employeeMap.get(i))) {
+			//// if ((String) employeeMap.get(i)==tmp) {
+			// System.out.println(i);
+			// }
+			// }
+			//
+			// System.out.println((String) employeeMap.get(Integer.parseInt(tmp)));
+
+			Map.Entry<Integer, String> temp;
+			for (Map.Entry<Integer, String> e : employeeMap.entrySet()) {
+				if (e.getValue().equals(tmp)) {
+					System.out.println(e.getKey());
 				}
 			}
-			
-//			System.out.println((String) employeeMap.get(Integer.parseInt(tmp)));
-		
-		}else {
+
+		} else {
 			System.out.println("ID - wrong");
-		}	
-	
+		}
+
 	}
-
-
 
 }
