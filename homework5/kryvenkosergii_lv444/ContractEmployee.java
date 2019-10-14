@@ -6,12 +6,10 @@ public class ContractEmployee extends Employee implements Pay {
 	private int federalTaxIdmember;
 	private String employeeld;
 
-	private int salary = 0;
 
 	@Override
 	public int calculatePay() {
-		this.salary = salary + fixedRate;
-		return salary;
+		return fixedRate;
 	}
 
 	public int getFederalTaxIdmember() {
@@ -19,7 +17,7 @@ public class ContractEmployee extends Employee implements Pay {
 	}
 
 	public int getSalary() {
-		return salary;
+		return calculatePay();
 	}
 
 	public ContractEmployee() {
@@ -30,13 +28,12 @@ public class ContractEmployee extends Employee implements Pay {
 		this.fixedRate = fixedRate;
 		this.federalTaxIdmember = federalTaxIdmember;
 		this.employeeld = employeeld;
-		calculatePay();
 	}
 
 	@Override
 	public String toString() {
 		return "ContractEmployee [federalTaxIdmember= " + federalTaxIdmember + ", employeeld= " + employeeld
-				+ ", fixedRate= " + fixedRate + ", salary= " + salary + "]";
+				+ ", fixedRate= " + fixedRate + "]";
 	}
 
 }

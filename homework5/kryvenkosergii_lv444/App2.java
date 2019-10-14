@@ -9,7 +9,7 @@ public class App2 {
 		emp[2] = new SalariedEmployee("Lycie", 3, 15, 6);
 		emp[3] = new ContractEmployee("Freddie", 678651327, 86);
 
-		Employee tmp = new Employee();
+		Employee tmp = emp[0];
 		for (int i = 0; i < emp.length - 1; i++) {
 			for (int j = i + 1; j < emp.length; j++) {
 

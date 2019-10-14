@@ -5,13 +5,11 @@ public class SalariedEmployee extends Employee implements Pay {
 	private int hourlyRate;
 	private int socialSecurityNumber;
 	private int hours;
-	private int salary = 0;
 	private String employeeld;
 
 	@Override
 	public int calculatePay() {
-		this.salary = salary + hourlyRate * hours;
-		return salary;
+		return hourlyRate*hours;
 	}
 
 	public int getSocialSecurityNumber() {
@@ -19,7 +17,7 @@ public class SalariedEmployee extends Employee implements Pay {
 	}
 
 	public int getSalary() {
-		return salary;
+		return calculatePay();
 	}
 
 	public SalariedEmployee() {
@@ -27,18 +25,16 @@ public class SalariedEmployee extends Employee implements Pay {
 	}
 
 	public SalariedEmployee(String employeeld, int socialSecurityNumber, int hourlyRate, int hours) {
-//		super();
 		this.hourlyRate = hourlyRate;
 		this.socialSecurityNumber = socialSecurityNumber;
 		this.hours = hours;
 		this.employeeld = employeeld;
-		calculatePay();
 	}
 
 	@Override
 	public String toString() {
 		return "SalariedEmployee [socialSecurityNumber= " + socialSecurityNumber + ", employeeld= " + employeeld
-				+ ", hourlyRate= " + hourlyRate + ", salary= " + salary + "]";
+				+ ", hourlyRate= " + hourlyRate + ", salary= " + calculatePay() + "]";
 	}
 
 }
