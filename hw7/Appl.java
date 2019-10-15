@@ -51,7 +51,10 @@ public class Appl {
 		
 		
 		// Second task
+
 		sentence =br.readLine();		
+		sentence.replaceAll("\\s+"," ");
+
 		arr= sentence.split(" ");
 		for (String string : arr) {
 			//System.out.println(string);
@@ -71,8 +74,9 @@ public class Appl {
 		
 		// Third task (NOT WORK)
 		String pattern = "\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$";
-		//String pattern = "\\$?[1-9]{3}\\.[0-9]{2}?$";
-		String text = "    $25,25          $12,12";
+		//String pattern = "\\$(([1-9][0-9]*)|0)+(\\.[0-9]{2})?";
+		String pattern = "\\$\\d+(\\,\\d{2})?";
+		String text = "    $025,25   $45       $12,12";
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher(text);
 
