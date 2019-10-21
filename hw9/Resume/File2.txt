@@ -1,0 +1,4 @@
+Lines count: 44
+Longest string: - Normally you should only include your most recent ten years of work experience on your resume. There are exceptions, but typically employers are most interested in your most recent experience, and going back more than ten years on your resume can age you.
+name: JANE SOMEBODY
+birthday: 07.02.1997
