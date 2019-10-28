@@ -1,8 +1,8 @@
 package com.softserve.lukas20191022;
 
 public class EquipmentType {
-	int ID;
-	String equipmentType;
+	private int ID;
+	private String equipmentType;
 	public int getID() {
 		return ID;
 	}

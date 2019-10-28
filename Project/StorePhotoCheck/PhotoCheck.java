@@ -55,10 +55,12 @@ public class PhotoCheck {
 		this.article = article;
 	}
 
+	
+
+	@Override
 	public String toString() {
-		return "PhotoCheck [photodate=" + photodate + ", absolutepath="
-				+ absolutepath + ", name=" + name + ", article=" + article
-				+ "]";
+		return "PhotoCheck [article=" + article + ", photodate=" + photodate
+				+ ", name=" + name + ", absolutepath=" + absolutepath + "]";
 	}
 
 	public int hashCode() {
