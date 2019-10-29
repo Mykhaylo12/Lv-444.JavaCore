@@ -69,7 +69,8 @@ public class AppGroup {
 			break;
 			
 		case "13":
-			System.out.println("");
+			Task13 t13 = new Task13();
+			t13.NCK();
 			break;
 			
 		case "14":
