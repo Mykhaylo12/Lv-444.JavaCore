@@ -1,15 +1,10 @@
-package com.company;
-
-import java.util.*;
-import java.util.Scanner;
+package classwork13.kryvenkosergii_lv44;
 
 public class Task4 {
 
-    public static void CalculateWords(){
-        System.out.println("Input word or sentense");
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        String []inputArray=input.split(" ");
-        System.out.println("You entered "+inputArray.length+" word(s)");
-    }
+	public static void CalculateWords(String input) {
+
+		String[] inputArray = input.split(" ");
+		System.out.println("You entered " + inputArray.length + " word(s)");
+	}
 }
