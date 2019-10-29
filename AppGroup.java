@@ -24,7 +24,11 @@ public class AppGroup {
 			break;
 			
 		case "3":
-			System.out.println("");
+			System.out.println("Enter cost of dollar");
+			int dollar = Integer.parseInt(br.readLine());
+			System.out.println("Enter sum of gryvna");
+			int grivna = Integer.parseInt(br.readLine());
+			System.out.println("You can buy "+(int)Task3.calculate(dollar, grivna)+" dollar");
 			break;
 			
 		case "4":
@@ -36,7 +40,8 @@ public class AppGroup {
 			break;
 			
 		case "6":
-			System.out.println("");
+			System.out.println("Enter some text using a spase between words");
+			Task6.countWords(br.readLine());
 			break;
 			
 		case "7":
