@@ -13,9 +13,9 @@ import java.util.List;
 
 
 public class Sales {
-	private int ID_Sale;
-	private int id_Contragent;
-	private int id_Good;
+	private int idSale;
+	private int idContragent;
+	private int idGood;
 	private LocalDate Date;
 	static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
@@ -23,42 +23,42 @@ public class Sales {
 
 	}
 
-	public Sales(int iD_Sale, int id_Contragent, int id_Good, LocalDate date) {
+	public Sales(int idSale, int idContragent, int idGood, LocalDate date) {
 
-		ID_Sale = iD_Sale;
-		this.id_Contragent = id_Contragent;
-		this.id_Good = id_Good;
+		this.idSale = idSale;
+		this.idContragent = idContragent;
+		this.idGood = idGood;
 		Date = date;
 	}
 
 	@Override
 	public String toString() {
-		return "Sales [ID_Sale=" + ID_Sale + ", id_Contragent=" + id_Contragent
-				+ ", id_Good=" + id_Good + ", Date=" + Date + "]";
+		return "Sales [idSale=" + idSale + ", idContragent=" + idContragent
+				+ ", idGood=" + idGood + ", Date=" + Date + "]";
 	}
 
 	public int getID_Sale() {
-		return ID_Sale;
+		return idSale;
 	}
 
 	public void setID_Sale(int iD_Sale) {
-		ID_Sale = iD_Sale;
+		idSale = iD_Sale;
 	}
 
 	public int getId_Contragent() {
-		return id_Contragent;
+		return idContragent;
 	}
 
 	public void setId_Contragent(int id_Contragent) {
-		this.id_Contragent = id_Contragent;
+		this.idContragent = id_Contragent;
 	}
 
 	public int getId_Good() {
-		return id_Good;
+		return idGood;
 	}
 
 	public void setId_Good(int id_Good) {
-		this.id_Good = id_Good;
+		this.idGood = id_Good;
 	}
 
 	public LocalDate getDate() {

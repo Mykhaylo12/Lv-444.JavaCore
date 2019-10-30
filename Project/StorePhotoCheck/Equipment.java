@@ -10,13 +10,13 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Equipment implements Comparable<Equipment> {
-	private int Article;
-	private String Serial;
+	private int article;
+	private String serial;
 	private EquipmentType equipmentype;
 	private String EquipmentTypeParent;
-	private int id_Region;
-	private int id_Agent;
-	private int id_Contragen;
+	private int idRegion;
+	private int idAgent;
+	private int idContragent;
 	private int ID;
 
 	public Equipment() {
@@ -27,39 +27,39 @@ public class Equipment implements Comparable<Equipment> {
 			String equipmentTypeParent, int id_Region, int id_Agent,
 			int id_Contragen, int iD) {
 		super();
-		Article = article;
-		Serial = serial;
+		this.article = article;
+		this.serial = serial;
 		this.equipmentype = equipmentype;
 		EquipmentTypeParent = equipmentTypeParent;
-		this.id_Region = id_Region;
-		this.id_Agent = id_Agent;
-		this.id_Contragen = id_Contragen;
+		this.idRegion = id_Region;
+		this.idAgent = id_Agent;
+		this.idContragent = id_Contragen;
 		ID = iD;
 	}
 
 	@Override
 	public String toString() {
-		return "Equipment [Article=" + Article + ", Serial=" + Serial
+		return "Equipment [Article=" + article + ", Serial=" + serial
 				+ ", equipmentype=" + equipmentype + ", EquipmentTypeParent="
-				+ EquipmentTypeParent + ", id_Region=" + id_Region
-				+ ", id_Agent=" + id_Agent + ", id_Contragen=" + id_Contragen
+				+ EquipmentTypeParent + ", id_Region=" + idRegion
+				+ ", id_Agent=" + idAgent + ", id_Contragen=" + idContragent
 				+ ", ID=" + ID + "]";
 	}
 
 	public int getArticle() {
-		return Article;
+		return article;
 	}
 
 	public void setArticle(int article) {
-		Article = article;
+		this.article = article;
 	}
 
 	public String getSerial() {
-		return Serial;
+		return serial;
 	}
 
 	public void setSerial(String serial) {
-		Serial = serial;
+		this.serial = serial;
 	}
 
 	public EquipmentType getEquipmentype() {
@@ -79,27 +79,27 @@ public class Equipment implements Comparable<Equipment> {
 	}
 
 	public int getId_Region() {
-		return id_Region;
+		return idRegion;
 	}
 
 	public void setId_Region(int id_Region) {
-		this.id_Region = id_Region;
+		this.idRegion = id_Region;
 	}
 
 	public int getId_Agent() {
-		return id_Agent;
+		return idAgent;
 	}
 
 	public void setId_Agent(int id_Agent) {
-		this.id_Agent = id_Agent;
+		this.idAgent = id_Agent;
 	}
 
-	public int getId_Contragen() {
-		return id_Contragen;
+	public int getId_Contragent() {
+		return idContragent;
 	}
 
 	public void setId_Contragen(int id_Contragen) {
-		this.id_Contragen = id_Contragen;
+		this.idContragent = id_Contragen;
 	}
 
 	public int getID() {
@@ -207,29 +207,32 @@ public class Equipment implements Comparable<Equipment> {
 	}
     
 	public static int compareByRegion(Equipment a, Equipment b) {
-        return a.id_Region.compareTo(b.id_Region);    
+        return a.idRegion-b.idRegion;    
         }
     
     public static int compareByAgent(Equipment a, Equipment b) {
-        return a.id_Agent.compareTo(b.id_Agent);
+        return a.idAgent-b.idAgent;
         }
-	
+    public static int compareByContragent(Equipment a, Equipment b) {
+        return a.idContragent-b.idContragent;
+        }
+    
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Article;
+		result = prime * result + article;
 		result = prime
 				* result
 				+ ((EquipmentTypeParent == null) ? 0 : EquipmentTypeParent
 						.hashCode());
 		result = prime * result + ID;
-		result = prime * result + ((Serial == null) ? 0 : Serial.hashCode());
+		result = prime * result + ((serial == null) ? 0 : serial.hashCode());
 		result = prime * result
 				+ ((equipmentype == null) ? 0 : equipmentype.hashCode());
-		result = prime * result + id_Agent;
-		result = prime * result + id_Contragen;
-		result = prime * result + id_Region;
+		result = prime * result + idAgent;
+		result = prime * result + idContragent;
+		result = prime * result + idRegion;
 		return result;
 	}
 
@@ -242,7 +245,7 @@ public class Equipment implements Comparable<Equipment> {
 		if (getClass() != obj.getClass())
 			return false;
 		Equipment other = (Equipment) obj;
-		if (Article != other.Article)
+		if (article != other.article)
 			return false;
 		if (EquipmentTypeParent == null) {
 			if (other.EquipmentTypeParent != null)
@@ -251,26 +254,28 @@ public class Equipment implements Comparable<Equipment> {
 			return false;
 		if (ID != other.ID)
 			return false;
-		if (Serial == null) {
-			if (other.Serial != null)
+		if (serial == null) {
+			if (other.serial != null)
 				return false;
-		} else if (!Serial.equals(other.Serial))
+		} else if (!serial.equals(other.serial))
 			return false;
 		if (equipmentype == null) {
 			if (other.equipmentype != null)
 				return false;
 		} else if (!equipmentype.equals(other.equipmentype))
 			return false;
-		if (id_Agent != other.id_Agent)
+		if (idAgent != other.idAgent)
 			return false;
-		if (id_Contragen != other.id_Contragen)
+		if (idContragent != other.idContragent)
 			return false;
-		if (id_Region != other.id_Region)
+		if (idRegion != other.idRegion)
 			return false;
 		return true;
 	}
-//	@Override
-//	public int compareTo(Equipment ob) {
-//		return Serial.compareTo(ob.getSerial());
-//	}
+
+	@Override
+	public int compareTo(Equipment ob) {
+		// TODO Auto-generated method stub
+		return serial.compareTo(ob.getSerial());
+	}
 }

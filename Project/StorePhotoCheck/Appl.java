@@ -13,6 +13,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.IntSummaryStatistics;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -163,7 +164,7 @@ public class Appl {
 				System.out.println((Equipment) it.next());
 			}
 
-			idContr = currentEquipment.get(0).getId_Contragen();
+			idContr = currentEquipment.get(0).getId_Contragent();
 			System.out.println("Contragent ID Number: ");
 			System.out.println(idContr);
 
@@ -174,18 +175,30 @@ public class Appl {
 			streamSales.filter(s -> s.getId_Contragent() == idContr).forEach(
 					s -> System.out.println(s.toString()));
 
-			// Task 5
+			// Task 5 
+			//add sorted (idContragent) i count(idRegion) by criteria (Id region) 
 			
-			System.out.println("AHT RIO S100");
+			System.out.println("AHT RIO S150");
 			allEquipment = (Equipment.getEquipments1(config.getALL_EQUIPMENT(), co));
 			Stream <Equipment> streamAllEquipments = allEquipment.stream();
-			//NEED add sorted i count by criteria (id Agent, Id region) 
 
-//			streamAllEquipments.filter(s -> s.getEquipmentype().getEquipmentType().equals("AHT RIO S100"))
-//			.sorted(Comparator.comparing(Equipment.compareByRegion(a, b)).collect(Collectors.toList())
-//					.forEach(s -> System.out.println(s.toString())));			
-			streamAllEquipments.filter(s -> s.getEquipmentype().getEquipmentType().equals("AHT RIO S100"))
-					.forEach(s -> System.out.println(s.toString()));			
+
+			streamAllEquipments.filter(s -> s.getEquipmentype().getEquipmentType().equals("AHT RIO S150"))
+			.filter(s -> s.getId_Region()==35)
+			.sorted(Comparator.comparingInt(s -> s.getId_Contragent())).collect(Collectors.toList())
+			.forEach(s -> System.out.println(s.toString()));			
+			
+//			streamAllEquipments.filter(s -> s.getEquipmentype().getEquipmentType().equals("AHT RIO S150"))
+//			.filter(s -> s.getId_Region()==35)
+//			.forEach(s -> System.out.println(s.toString()));	
+			
+			IntSummaryStatistics stats = allEquipment.stream()
+					.filter(s -> s.getEquipmentype().getEquipmentType().equals("AHT RIO S150"))
+					.filter(s -> s.getId_Region()==35)
+					.mapToInt(s->s.getId_Region()).summaryStatistics();
+				System.out.println("Count equipment in List : " + stats.getCount());
+
+		
 
 			
 			//
@@ -233,5 +246,4 @@ public class Appl {
 		// System.out.println(path);
 		// }
 	}
-
 }
